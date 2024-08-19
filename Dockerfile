@@ -31,7 +31,7 @@ RUN mkdir -p /root/.ssh && \
 COPY ssh_config /root/.ssh/config
 
 # Clone repository and submodules
-RUN git clone --recurse-submodules git@github.com:yourusername/your-backend-repo.git /app && \
+RUN git clone --recurse-submodules git@github.com:Wyzo-app/backend.git /app && \
     cd /app && \
     composer install && \
     php artisan migrate && \
